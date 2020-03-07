@@ -26,6 +26,9 @@
     "bitbag/cms-plugin": {
         "version": "v2.3.4"
     },
+    "brille24/sylius-special-price-plugin": {
+        "version": "v1.6.1"
+    },
     "clue/stream-filter": {
         "version": "v1.4.0"
     },

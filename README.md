@@ -8,6 +8,7 @@ Main plugins
 * [Nelmio CORS Bundle](https://github.com/nelmio/NelmioCorsBundle): The NelmioCorsBundle allows you to send Cross-Origin Resource Sharing headers with ACL-style per-URL configuration.
 * [Sylius CMS plugin](https://github.com/BitBagCommerce/SyliusCmsPlugin): This plugin allows you to add dynamic blocks with images, text or HTML to your storefront as well as pages and FAQs section.
 * [Admin Order Creation](https://github.com/Sylius/AdminOrderCreationPlugin): Creating (and copying) orders in the administration panel.
+* [Special Price Plugin](https://github.com/Brille24/SyliusSpecialPricePlugin): This plugin provides a configuration for prices that are just active within a certain date range.
 
 System Requirements
 -------------------
