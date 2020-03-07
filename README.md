@@ -3,7 +3,10 @@
 Installed plugins
 -----------------
 * [Sylius Standard Edition](https://github.com/Sylius/Sylius-Standard): Sylius is the first decoupled eCommerce platform based on Symfony and Doctrine.
-* [CMS](https://github.com/BitBagCommerce/SyliusCmsPlugin): This plugin allows you to add dynamic blocks with images, text or HTML to your storefront as well as pages and FAQs section.
+* [Sylius Shop API plugin](https://github.com/Sylius/ShopApiPlugin): The Shop Api Plugin is a plugin for the Sylius E-Commerce Platform which provides an easy integration for exposing the Sylius functionality to the end customer.
+* [Lexik JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle/): This bundle provides JWT (Json Web Token) authentication for Symfony API.
+* [Nelmio CORS Bundle](https://github.com/nelmio/NelmioCorsBundle): The NelmioCorsBundle allows you to send Cross-Origin Resource Sharing headers with ACL-style per-URL configuration.
+* [Sylius CMS plugin](https://github.com/BitBagCommerce/SyliusCmsPlugin): This plugin allows you to add dynamic blocks with images, text or HTML to your storefront as well as pages and FAQs section.
 * [Admin Order Creation](https://github.com/Sylius/AdminOrderCreationPlugin): Creating (and copying) orders in the administration panel.
 
 System Requirements
