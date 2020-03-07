@@ -1,7 +1,7 @@
 <h1 align="center">Sylius</h1>
 
-Installed plugins
------------------
+Main plugins
+------------
 * [Sylius Standard Edition](https://github.com/Sylius/Sylius-Standard): Sylius is the first decoupled eCommerce platform based on Symfony and Doctrine.
 * [Sylius Shop API plugin](https://github.com/Sylius/ShopApiPlugin): The Shop Api Plugin is a plugin for the Sylius E-Commerce Platform which provides an easy integration for exposing the Sylius functionality to the end customer.
 * [Lexik JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle/): This bundle provides JWT (Json Web Token) authentication for Symfony API.
@@ -40,6 +40,16 @@ To connect to DB (db name is sylius):
 ```bash
 $ docker-compose exec mysql mysql -u sylius -pnopassword
 ```
+
+Generate the SSH keys (use JWT_PASSPHRASE from .env file)
+---------------------------------------------------------
+
+```bash
+$ mkdir -p config/jwt
+$ openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
+$ openssl pkey -in config/jwt/private.pem -out config/jwt/public.pem -pubout
+```
+chmod private.pem file to 644
 
 Troubleshooting
 ---------------
