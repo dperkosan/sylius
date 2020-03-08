@@ -33,3 +33,12 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    # special price (decorate service)
+    sylius.shop_api_plugin.factory.product_variant_view_factory.special_price:
+        class: App\Service\Sylius\ShopApiPlugin\Factory\Product\ProductVariantViewFactorySpecialPrice
+        decorates: sylius.shop_api_plugin.factory.product_variant_view_factory
+        arguments: [
+            '@sylius.shop_api_plugin.factory.product_variant_view_factory.special_price.inner',
+            '@sylius.shop_api_plugin.factory.price_view_factory'
+        ]
