@@ -8,6 +8,8 @@ imports:
 
     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/config.yml" }
 
+    - { resource: "@BitBagSyliusElasticsearchPlugin/Resources/config/config.yml" }
+
 parameters:
     sylius_core.public_dir: '%kernel.project_dir%/public'
 

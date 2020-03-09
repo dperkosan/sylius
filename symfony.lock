@@ -26,6 +26,9 @@
     "bitbag/cms-plugin": {
         "version": "v2.3.4"
     },
+    "bitbag/elasticsearch-plugin": {
+        "version": "v1.5.6"
+    },
     "brille24/sylius-special-price-plugin": {
         "version": "v1.6.1"
     },
@@ -119,6 +122,9 @@
     "egulias/email-validator": {
         "version": "2.1.5"
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v6.7.2"
+    },
     "friends-of-behat/mink": {
         "version": "v1.8.0"
     },
@@ -151,6 +157,18 @@
     },
     "friendsofsymfony/ckeditor-bundle": {
         "version": "1.2.0"
+    },
+    "friendsofsymfony/elastica-bundle": {
+        "version": "5.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "5.0",
+            "ref": "46c9cd2c1e07f0fcfd97e96f12b03b2e0845c4cd"
+        },
+        "files": [
+            "config/packages/fos_elastica.yaml"
+        ]
     },
     "friendsofsymfony/jsrouting-bundle": {
         "version": "2.3",
@@ -193,6 +211,12 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.4.2"
+    },
+    "guzzlehttp/ringphp": {
+        "version": "1.1.1"
+    },
+    "guzzlehttp/streams": {
+        "version": "3.0.0"
     },
     "hamcrest/hamcrest-php": {
         "version": "v2.0.0"
@@ -508,6 +532,12 @@
     },
     "ramsey/uuid": {
         "version": "3.8.0"
+    },
+    "react/promise": {
+        "version": "v2.7.1"
+    },
+    "ruflin/elastica": {
+        "version": "6.1.1"
     },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"

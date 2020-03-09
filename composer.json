@@ -17,6 +17,7 @@
     "require": {
         "php": "^7.3",
         "bitbag/cms-plugin": "^2.3",
+        "bitbag/elasticsearch-plugin": "^1.5",
         "brille24/sylius-special-price-plugin": "^1.6",
         "nelmio/cors-bundle": "^2.0",
         "sylius/admin-order-creation-plugin": "^0.7.1",
