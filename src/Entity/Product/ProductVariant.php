@@ -47,4 +47,16 @@ class ProductVariant extends BaseProductVariant implements ProductVariantSpecial
 
         return $this->channelPricings;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getOptionValues(): Collection
+    {
+        if($this->optionValues == null){
+            $this->optionValues = new \Doctrine\Common\Collections\ArrayCollection();
+        }
+
+        return $this->optionValues;
+    }
 }
