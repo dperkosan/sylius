@@ -5,3 +5,16 @@ imports:
 sylius_shop_api:
     view_classes:
         product_variant: App\Service\Sylius\ShopApiPlugin\View\Product\ProductVariantViewExtended
+    included_attributes:
+        - "t_shirt_brand"
+        - "t_shirt_collection"
+        - "t_shirt_material"
+        - "cap_brand"
+        - "cap_collection"
+        - "cap_material"
+        - "dress_brand"
+        - "dress_collection"
+        - "dress_material"
+        - "jeans_brand"
+        - "jeans_collection"
+        - "jeans_material"
