@@ -1,3 +1,7 @@
 imports:
     - { resource: "@SyliusShopApiPlugin/Resources/config/app/config.yml" }
     - { resource: "@SyliusShopApiPlugin/Resources/config/app/sylius_mailer.yml" }
+
+sylius_shop_api:
+    view_classes:
+        product_variant: App\Service\Sylius\ShopApiPlugin\View\Product\ProductVariantViewExtended

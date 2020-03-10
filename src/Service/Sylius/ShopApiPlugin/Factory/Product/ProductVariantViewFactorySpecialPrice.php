@@ -35,18 +35,21 @@ final class ProductVariantViewFactorySpecialPrice implements ProductVariantViewF
             throw new ViewCreationException('Variant does not have pricing.');
         }
 
+        $specialPrice = null;
         if(!$channelSpecialPricing->isEmpty()){
             $specialPrice = $channelSpecialPricing->first()->getPrice();
             $startsAt = $channelSpecialPricing->first()->getStartsAt();
             $endsAt = $channelSpecialPricing->first()->getEndsAt();
         }
         
-        // if (null !== $specialPrice) {
-        //     $variantView->specialPrice = $this->priceViewFactory->create(
-        //         $specialPrice,
-        //         $channel->getBaseCurrency()->getCode()
-        //     );
-        // }
+        if (null !== $specialPrice) {
+            $variantView->specialPrice = $this->priceViewFactory->create(
+                $specialPrice,
+                $channel->getBaseCurrency()->getCode()
+            );
+            $variantView->startsAt = $startsAt;
+            $variantView->endsAt = $endsAt;
+        }
 
         return $variantView;
     }
