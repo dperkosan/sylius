@@ -34,11 +34,25 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
-    # special price (decorate service)
+    # Disable autowire for custom API endpoints
+    App\Controller\Sylius\ShopApiPlugin\:
+        resource: '../src/Controller/Sylius/ShopApiPlugin'
+        tags: ['controller.service_arguments']
+        autowire: false
+
+    # DECORATE SERVICES
+    # special price
     sylius.shop_api_plugin.factory.product_variant_view_factory.special_price:
         class: App\Service\Sylius\ShopApiPlugin\Factory\Product\ProductVariantViewFactorySpecialPrice
         decorates: sylius.shop_api_plugin.factory.product_variant_view_factory
-        arguments: [
-            '@sylius.shop_api_plugin.factory.product_variant_view_factory.special_price.inner',
-            '@sylius.shop_api_plugin.factory.price_view_factory'
-        ]
+        arguments: 
+            - '@sylius.shop_api_plugin.factory.product_variant_view_factory.special_price.inner'
+            - '@sylius.shop_api_plugin.factory.price_view_factory'
+
+    # CUSTOM END POINTS
+    # get cart for logged user
+    sylius.shop_api_plugin.controller.cart.summarize_action_for_user:
+        class: App\Controller\Sylius\ShopApiPlugin\Cart\SummarizeActionForUser
+        arguments:
+            - '@sylius.shop_api_plugin.view_repository.cart_view_repository'
+            - '@fos_rest.view_handler'

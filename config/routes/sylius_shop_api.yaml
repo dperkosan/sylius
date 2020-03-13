@@ -1,2 +1,43 @@
-sylius_shop_api:
-    resource: "@SyliusShopApiPlugin/Resources/config/routing.yml"
+sylius_shop_api_cart:
+    resource: "config/routing/cart.yml"
+    prefix: /shop-api
+
+sylius_shop_api_product_by_slug:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/productBySlug.yml"
+    prefix: /shop-api
+
+sylius_shop_api_product_by_code:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/productByCode.yml"
+    prefix: /shop-api
+
+sylius_shop_api_taxon:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/taxon.yml"
+    prefix: /shop-api
+
+sylius_shop_api_register:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/register.yml"
+    prefix: /shop-api
+
+sylius_shop_api_checkout:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/checkout.yml"
+    prefix: /shop-api/checkout
+
+sylius_shop_api_customer:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/customer.yml"
+    prefix: /shop-api
+
+sylius_shop_api_product_list:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/productList.yml"
+    prefix: /shop-api
+
+sylius_shop_api_address_book:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/address_book.yml"
+    prefix: /shop-api
+
+sylius_shop_api_order:
+    resource: "@SyliusShopApiPlugin/Resources/config/routing/order.yml"
+    prefix: /shop-api
+
+sylius_shop_api_login:
+    methods: [POST]
+    path: /shop-api/login
