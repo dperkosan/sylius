@@ -28,11 +28,10 @@ $ cd sylius
 $ docker-compose up
 ```
 
-In order to install fresh DB, run this commands:
+Populate ES:
 
 ```bash
-$ docker-compose exec php php bin/console doctrine:schema:update --force
-$ docker-compose exec php php bin/console sylius:fixtures:load 
+$ docker-compose exec php php bin/console fos:elastica:populate
 ```
 - admin: http://127.0.0.1/admin (sylius/sylius)
 - shop:  http://127.0.0.1
