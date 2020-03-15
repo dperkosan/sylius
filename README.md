@@ -34,7 +34,8 @@ Populate ES:
 $ docker-compose exec php php bin/console fos:elastica:populate
 ```
 - admin: http://127.0.0.1/admin (sylius/sylius)
-- shop:  http://127.0.0.1
+- FR shop:  http://localhost
+- EN shop:  http://127.0.0.1
 
 To connect to DB (db name is sylius):
 

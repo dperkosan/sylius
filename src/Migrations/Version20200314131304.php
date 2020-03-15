@@ -14,7 +14,7 @@ final class Version20200314131304 extends AbstractMigration
 {
     public function getDescription() : string
     {
-        return 'Skeleton DB (without products)';
+        return 'Skeleton DB (with basic data)';
     }
 
     public function up(Schema $schema) : void
@@ -964,7 +964,7 @@ final class Version20200314131304 extends AbstractMigration
 
         LOCK TABLES `sylius_admin_user` WRITE;
         /*!40000 ALTER TABLE `sylius_admin_user` DISABLE KEYS */;
-        INSERT INTO `sylius_admin_user` VALUES (1,'sylius','sylius',1,'6b6av1ow4hwk80o0ww80cgc08ckcsos','\$argon2i\$v=19\$m=65536,t=4,p=1\$QS9FcThzSHdJckFaUFR5NQ\$M+r1/yMYWH+aUbHwUY8m2BhMRFbbmr6jZF+8o7M/bZU','argon2i','2020-03-12 11:47:58',NULL,NULL,NULL,NULL,0,NULL,NULL,'a:1:{i:0;s:26:\"ROLE_ADMINISTRATION_ACCESS\";}','sylius@example.com','sylius@example.com','2020-03-10 01:13:41','2020-03-10 01:13:41','John','Doe','en'),(2,'api','api',1,'96utapx7z5csko0occ8gwwg840o4sw0','\$argon2i\$v=19\$m=65536,t=4,p=1\$UDRsWExjTm1jTksubHc1Sw\sylius locale on two different domains$em6YVlZRECViKMK9yHU5REI7lpUmYqIk0PksI+GPfZU','argon2i',NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,'a:2:{i:0;s:26:\"ROLE_ADMINISTRATION_ACCESS\";i:1;s:15:\"ROLE_API_ACCESS\";}','api@example.com','api@example.com','2020-03-10 01:13:42','2020-03-10 01:13:42','Luke','Brushwood','en');
+        INSERT INTO `sylius_admin_user` VALUES (1,'sylius','sylius',1,'6b6av1ow4hwk80o0ww80cgc08ckcsos','\$argon2i\$v=19\$m=65536,t=4,p=1\$QS9FcThzSHdJckFaUFR5NQ\$M+r1/yMYWH+aUbHwUY8m2BhMRFbbmr6jZF+8o7M/bZU','argon2i','2020-03-15 09:27:41',NULL,NULL,NULL,NULL,0,NULL,NULL,'a:1:{i:0;s:26:\"ROLE_ADMINISTRATION_ACCESS\";}','sylius@example.com','sylius@example.com','2020-03-10 01:13:41','2020-03-15 09:27:41','John','Doe','en'),(2,'api','api',1,'96utapx7z5csko0occ8gwwg840o4sw0','\$argon2i\$v=19\$m=65536,t=4,p=1\$UDRsWExjTm1jTksubHc1Sw\$em6YVlZRECViKMK9yHU5REI7lpUmYqIk0PksI+GPfZU','argon2i',NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,'a:2:{i:0;s:26:\"ROLE_ADMINISTRATION_ACCESS\";i:1;s:15:\"ROLE_API_ACCESS\";}','api@example.com','api@example.com','2020-03-10 01:13:42','2020-03-10 01:13:42','Luke','Brushwood','en');
         /*!40000 ALTER TABLE `sylius_admin_user` ENABLE KEYS */;
         UNLOCK TABLES;
 
@@ -1045,7 +1045,7 @@ final class Version20200314131304 extends AbstractMigration
 
         LOCK TABLES `sylius_channel` WRITE;
         /*!40000 ALTER TABLE `sylius_channel` DISABLE KEYS */;
-        INSERT INTO `sylius_channel` VALUES (1,1,1,6,NULL,1,'channel_plab_fr','PLAB FR','#10f10d',NULL,1,'127.0.0.1','2020-03-14 10:51:27','2020-03-14 11:46:28',NULL,'order_items_based','contact@plabbeauty.fr',0,0,0),(2,2,1,7,NULL,2,'channel_plab_gb','PLAB GB','#000000',NULL,1,'127.0.0.1','2020-03-14 11:04:14','2020-03-14 12:01:35',NULL,'order_items_based','contact@plabbeauty.com',0,0,0);
+        INSERT INTO `sylius_channel` VALUES (1,1,1,6,NULL,1,'channel_plab_fr','PLAB FR','#10f10d',NULL,1,'localhost','2020-03-14 10:51:27','2020-03-15 09:15:26',NULL,'order_items_based','contact@plabbeauty.fr',0,0,0),(2,2,1,7,NULL,2,'channel_plab_gb','PLAB GB','#000000',NULL,1,'127.0.0.1','2020-03-14 11:04:14','2020-03-15 09:15:52',NULL,'order_items_based','contact@plabbeauty.com',0,0,0);
         /*!40000 ALTER TABLE `sylius_channel` ENABLE KEYS */;
         UNLOCK TABLES;
 
@@ -3002,7 +3002,6 @@ final class Version20200314131304 extends AbstractMigration
         INSERT INTO `sylius_zone_member` VALUES (1,1,'FR'),(3,1,'GB'),(2,1,'MC'),(4,2,'BE'),(5,3,'FR'),(6,3,'MC'),(7,4,'BE'),(8,5,'GB'),(9,6,'z_shipping_zone_be'),(10,6,'z_shipping_zone_fr'),(11,6,'z_tax_normal_20'),(12,6,'z_tax_normal_21'),(13,7,'z_shipping_zone_gb'),(14,7,'z_tax_normal_20'),(15,7,'z_tax_normal_21');
         /*!40000 ALTER TABLE `sylius_zone_member` ENABLE KEYS */;
         UNLOCK TABLES;
-
         /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
         /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
