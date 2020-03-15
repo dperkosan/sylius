@@ -36,6 +36,7 @@ $ docker-compose exec php php bin/console fos:elastica:populate
 - admin: http://127.0.0.1/admin (sylius/sylius)
 - FR shop:  http://localhost
 - EN shop:  http://127.0.0.1
+- API swagger: https://app.swaggerhub.com/apis/Sylius/sylius-shop-api/1.0.0#/
 
 To connect to DB (db name is sylius):
 
